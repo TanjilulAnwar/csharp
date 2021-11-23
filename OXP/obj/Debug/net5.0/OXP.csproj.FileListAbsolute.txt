@@ -1,0 +1,16 @@
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\OXP.exe
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\OXP.deps.json
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\OXP.runtimeconfig.json
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\OXP.runtimeconfig.dev.json
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\OXP.dll
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\ref\OXP.dll
+C:\Users\NICE\source\repos\OXP\OXP\bin\Debug\net5.0\OXP.pdb
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.csproj.AssemblyReference.cache
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.AssemblyInfoInputs.cache
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.AssemblyInfo.cs
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.csproj.CoreCompileInputs.cache
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.dll
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\ref\OXP.dll
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.pdb
+C:\Users\NICE\source\repos\OXP\OXP\obj\Debug\net5.0\OXP.genruntimeconfig.cache
