@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\NICE\\.nuget\\packages\\": {}
+    "C:\\Users\\tanji\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NICE\\source\\repos\\OXP\\OXP\\OXP.csproj",
+      "projectUniqueName": "K:\\CSHARP\\OXP\\OXP.csproj",
       "projectName": "OXP",
-      "projectPath": "C:\\Users\\NICE\\source\\repos\\OXP\\OXP\\OXP.csproj",
-      "packagesPath": "C:\\Users\\NICE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NICE\\source\\repos\\OXP\\OXP\\obj\\",
+      "projectPath": "K:\\CSHARP\\OXP\\OXP.csproj",
+      "packagesPath": "C:\\Users\\tanji\\.nuget\\packages\\",
+      "outputPath": "K:\\CSHARP\\OXP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\NICE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tanji\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

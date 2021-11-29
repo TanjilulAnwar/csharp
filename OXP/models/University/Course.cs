@@ -16,5 +16,13 @@ namespace OXP.models
             return Code + " " + Title + " " + Credit;
 
         }
+        public double GetResult(double mid, double final)
+        {
+
+            Calculator calculator = new Calculator();//USES Relationship
+            double result = calculator.Add(mid,final);
+            return result;
+
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OXP.models
 {
-    class Address
+   public class Address
     {
         public string HouseNo { get; set; }
         public string RoadNo { get; set; }
