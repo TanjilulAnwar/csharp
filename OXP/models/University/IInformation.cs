@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace OXP.models.University
 {
-    class Calculator
+    public interface IInformation
     {
-        public double Add(double firstNumber, double secondNumber) {
-
-            return firstNumber + secondNumber;
-        }
+        string GetBasicInformation();
     }
 }

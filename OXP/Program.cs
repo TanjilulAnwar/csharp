@@ -1,5 +1,6 @@
 ﻿using OXP.models;
 using OXP.models.shapes;
+using OXP.models.University;
 using System;
 using System.Collections.Generic;
 
@@ -10,18 +11,64 @@ namespace OXP
         static void Main(string[] args)
         {
 
+            /*************************Interface***********************************/
 
+            Student student = new Student() {
+            RegNo= "5434534",
+            Name ="Habib",
+            Roll = "545",
+            Email = "f@mail.com"
+            
+            };
+            Course course = new Course()
+            {
+                Title = "Algorithm",
+                Code = "CSE101",
+                Credit = 3
+
+            };
+            string info = student.GetBasicInformation();
+
+            Department department = new Department()
+            {
+                Code = "CSE",
+                Name = "Computer Science"
+
+            };
+            department.Students.Add(student);
+            department.Students.Add(student);
+            department.Courses.Add(course);
+
+
+
+
+            Console.WriteLine("Area of Cylinder = {0}", department.GetBasicInformation());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*************************Interface***********************************/
 
             /*************************Method Overriding***********************************/
 
-            double r = 3.0, h = 5.0;
-            Shape c = new Circle(r);
-            Shape s = new Sphere(r);
-            Shape l = new Cylinder(r, h);
-            // Display results.
-            Console.WriteLine("Area of Circle   = {0:F2}", c.Area());
-            Console.WriteLine("Area of Sphere   = {0:F2}", s.Area());
-            Console.WriteLine("Area of Cylinder = {0:F2}", l.Area());
+            //double r = 3.0, h = 5.0;
+            //Shape c = new Circle(r);
+            //Shape s = new Sphere(r);
+            //Shape l = new Cylinder(r, h);
+            //// Display results.
+            //Console.WriteLine("Area of Circle   = {0:F2}", c.Area());
+            //Console.WriteLine("Area of Sphere   = {0:F2}", s.Area());
+            //Console.WriteLine("Area of Cylinder = {0:F2}", l.Area());
             /*************************Method Overriding***********************************/
             /*************************Casting****************************/
 
