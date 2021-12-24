@@ -1,12 +1,15 @@
-﻿using OXP.models;
+﻿using OXP.Extension;
+using OXP.models;
 using OXP.models.shapes;
 using OXP.models.University;
 using OXP.Other;
 using OXP.Other.Delegates;
 using OXP.Other.Generics;
+using OXP.Reflection;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Reflection;
 using System.Linq;
 
 namespace OXP
@@ -63,20 +66,137 @@ namespace OXP
             int r = num1 + num2;
             Console.WriteLine("Sum is " + r);
         }
+
+        //  public delegate void Func<in T, out TResult>(T param);//not recommended
+        static void VoidAdd(int firstNum, int secondNum)
+        {
+            int r= firstNum + secondNum;
+            Console.WriteLine(r);
+        }
+
+        static bool IsCheckName(string name)
+        {
+          if(name.StartsWith("Md "))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
         static void Main(string[] args)
         {
+            /*************************Reflection***********************************/
+
+            Staff staff = new Staff();
+
+            var staffInfo = typeof(Staff);
+            string assemblyName = staffInfo.Assembly.FullName;
+            Console.WriteLine(assemblyName);
+            var methods = staffInfo.GetMethods();
+
+            foreach(var method in methods)
+            {
+                Console.WriteLine(method.ReturnType+" "+method.Name);
+            }
+
+            //var props = staffInfo.GetProperties();
+
+            //foreach (var prop in props)
+            //{
+            //    Console.WriteLine(prop.GetType() + " " + prop.Name);
+            //}
+        var  props = staffInfo.GetProperties(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+            foreach (var prop in props)
+            {
+                Console.WriteLine(" " + prop.Name);
+            }
 
 
+            /*************************Reflection***********************************/
+            /*************************Extension Method***********************************/
+
+            //Worker worker = new Worker();
+            //worker.Id = 101;
+            //worker.Name = "Shohid";
+            //worker.Address = "New York";
+            //string info =worker.GetInfo();
+            //Console.WriteLine(info);
+            //info.ShowLength();
+            //Schedule schedule  = new Schedule();
+            //schedule.Id = 101;
+            //schedule.Title = "Cleaning";
+            //schedule.Slot = "5 AM";
+            //info = schedule.GetInfo();
+            //Console.WriteLine(info);
+            //info.ShowLength();
+            /*************************Extension Method***********************************/
+
+
+            /*************************Predicate Delegate***********************************/
+
+            //List<string> names = new List<string>();
+            //names.Add("Mukul");
+            //names.Add("Md Rasel");
+            //names.Add("Bashar");
+            //names.Add("Jaitun");
+            //names.Add("Md Sojib");
+
+
+            //Predicate<string> nameSearch = IsCheckName;
+            //var data = names.FindAll(IsCheckName);
+            //foreach(var item in data)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Predicate<string> matching =x=> x.StartsWith("Md ");
+            //data = names.FindAll(matching);
+            //foreach (var item in data)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //data = names.FindAll(x => x.StartsWith("Md "));
+            //foreach (var item in data)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            /*************************Predicate Delegate***********************************/
+
+            /*************************Action Delegate***********************************/
+            //Action<int, int> Calchandler = VoidAdd;
+            //Calchandler.Invoke(10, 69);
+
+            //Action<int, int> anonymMethod = (int fNum, int sNum) => Console.WriteLine(fNum + sNum);
+            //anonymMethod.Invoke(10, 69);
+
+
+            /*************************Action Delegate***********************************/
+
+
+            /*************************Func Delegate***********************************/
+            //Func<int, int, int> Calchandler = Add;
+            //int res =Calchandler.Invoke(10, 69);
+            //Console.WriteLine(res);
+
+            //Func<int, int, int> anonymMethod = (int fNum, int sNum) => fNum + sNum;
+            //res = anonymMethod.Invoke(10, 69);
+            //Console.WriteLine(res);
+
+
+            /*************************Func Delegate***********************************/
 
             /*************************Generic Delegate***********************************/
-            PrintHandler<string,string> printHandler = Hello;
-            printHandler += GoodBye;
-            printHandler("Rasul", "Kabir");
-            PrintHandlerX<string, string> printHandlerX = HelloX;
-          //  printHandlerX += GoodBye;
-           Console.WriteLine( printHandlerX("Samsul", "Kabir"));
-            PrintHandler<int,int> printHandler1 = WriteNumber;
-            printHandler1(5,4);
+            //  PrintHandler<string,string> printHandler = Hello;
+            //  printHandler += GoodBye;
+            //  printHandler("Rasul", "Kabir");
+            //  PrintHandlerX<string, string> printHandlerX = HelloX;
+            ////  printHandlerX += GoodBye;
+            // Console.WriteLine( printHandlerX("Samsul", "Kabir"));
+            //  PrintHandler<int,int> printHandler1 = WriteNumber;
+            //  printHandler1(5,4);
             /*************************Generic Delegate***********************************/
 
             /*************************Multicast Delegate***********************************/
